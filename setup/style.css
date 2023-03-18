@@ -1,0 +1,309 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background: #ffffff;
+    margin: 15px;
+    width: 340px;
+    position: absolute;
+}
+
+.preview {
+    background: #f9fafd;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
+    overflow: scroll;
+}
+
+.layout-placeholder {
+    color: #464b5b;
+    font-size: 18px;
+    display: grid;
+
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto auto;
+    grid-column-gap: var(--gap);
+    grid-row-gap: var(--gap);
+    margin-bottom: 5%;
+}
+
+.accordion {
+    background: #e6ebff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.accordion-title {
+    color: #0033ff;
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+.form-control {
+    background-color: #ffffff;
+    border: 1px solid #d6dae4;
+    border-radius: 3px;
+    padding: 6px 12px;
+    height: 38px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+}
+
+input[type="radio"] {
+    margin: 0;
+    width: 15px;
+    height: 15px;
+}
+
+.radio-select {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.card{
+    width: 30vw;
+    height: 82vh;
+    border: 1px gray solid;
+    border-radius: 4px;
+    margin-left: 3rem;
+    margin-top: 2rem;
+}
+.card p,h1{
+    margin: 0;
+    padding: 0;
+}
+.d-flex{
+    display: flex;
+}
+
+.flex-aling-center{
+    align-items: center;
+}
+.flex-justify-start{
+    justify-content: start;
+}
+.flex-justify-between{
+    justify-content: space-between;
+}
+.card_header_left{
+    padding: 5%;
+}
+
+.card_header_left_logo{
+    margin-right: 5%;
+}
+.card_header_left_name{
+    color: black;
+    font-size: 16pt;
+}
+.card_header_left_date{
+    color: grey;
+    font-weight: 100;
+    font-size: 12pt;
+}
+.card_header_right{
+    margin-right: 7%;
+}
+.card_text p{
+    font-size: 11pt;
+    padding: 2%;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    overflow-y: scroll;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+.card_devider{
+    width: 90%;
+    height: 0.5px;
+    background-color: gray;
+    margin-left: 5%;
+}
+.card_likes{
+    display: flex;
+    padding: 2%;
+}
+.card_likes_counter{
+    margin-left: 2%;
+}
+
+#load-more{
+    height: 100px;
+    width: 200px;
+    background-color: turquoise;
+    margin-top: 50px;
+}
+
+.dark-theme {
+    background: #121212;
+    color: #eee;
+  }
+.dark-theme h1,
+.dark-theme p {
+    color: #eee;
+  }
+
+  .dark-theme .form-control{
+    background-color: #121212;
+    color: #eee;
+  }
+  .card_likes:hover{
+    cursor: pointer;
+  }
+  
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+    /* CSS */
+    .layout-placeholder {
+        grid-template-columns: auto auto;
+  }
+}
+  
+  /* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    
+    /* CSS */
+    .layout-placeholder {
+        grid-template-columns: auto auto;
+  }
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    /* CSS */
+    .layout-placeholder {
+        grid-template-columns: auto auto;
+  }
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  @media(max-width:768){
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .sidebar{
+        display: none;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* CSS */
+    .layout-placeholder {
+        /* grid-template-columns: auto auto auto; */
+  }
+  .sidebar{
+    display: none;
+  }
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 425px) and (max-width: 768px) {
+    
+    /* CSS */
+    .layout-placeholder {
+        /* grid-template-columns: auto auto; */
+        display: flex;
+        flex-direction: column;
+  }
+  .sidebar{
+    display: none;
+  }
+  .card{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  /* @media (min-width:768){
+    .layout-placeholder{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+    
+        max-width: 100%;
+    }
+  } */
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    /* CSS */
+    .layout-placeholder {
+        /* grid-template-columns: auto; */
+       display: flex;
+       flex-direction: column;
+       /* max-width:max-content; */
+        
+  }
+ 
+  .sidebar{
+    display: none;
+  }
+  }
